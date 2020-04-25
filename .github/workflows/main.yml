@@ -30,7 +30,7 @@ jobs:
           source: ${{ env.BACKEND_SRC }}
           target: ${{ env.BACKEND_TARGET }}
           strip_components: 0
-          rm: true
+          rm: false
       - name: SSH Remote Commands
         # https://github.com/appleboy/ssh-action
         uses: appleboy/ssh-action@master

@@ -1,14 +1,17 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { readFileSync } from 'fs';
+import { parse } from 'dotenv';
 
 const isDev = process.env.NODE_ENV !== 'production';
+const mongoConfig = process.cwd() + '/src/config/' + (isDev ? 'mongodb.dev' : 'mongodb.prod');
+const mongoURl = parse(readFileSync(mongoConfig)).MONGO_URL;
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'mongodb',
-      url:
-        'mongodb://127.0.0.1:27017/nest?authSource=admin -u root -p 4lfj2h@Mongo',
+      url: mongoURl,
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
       useUnifiedTopology: true,
