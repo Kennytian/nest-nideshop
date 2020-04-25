@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "shop",
+      "script": "dist/main.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 4006
+      },
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}
