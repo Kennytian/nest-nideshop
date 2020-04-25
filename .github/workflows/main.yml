@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [ release ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  HOST: ${{secrets.BD_HOST}}
+  USERNAME: ${{secrets.BD_USERNAME}}
+  SSH_KEY: ${{secrets.BD_SSH_KEY}}
+  BACKEND_SRC: "./**"
+  BACKEND_TARGET: nideshop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout release branch code
+        uses: actions/checkout@v2
+      - name: SCP Command to Transfer Files
+        # https://github.com/appleboy/scp-action
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ env.HOST }}
+          username: ${{ env.USERNAME }}
+          key: ${{ env.SSH_KEY }}
+          source: ${{ env.BACKEND_SRC }}
+          target: ${{ env.BACKEND_TARGET }}
+          strip_components: 0
+          rm: false
+      - name: SSH Remote Commands
+        # https://github.com/appleboy/ssh-action
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ env.HOST }}
+          username: ${{ env.USERNAME }}
+          key: ${{ env.SSH_KEY }}
+          script: |
+            cd ${{ env.BACKEND_TARGET }}
+            yarn ; pm2 stop pm2.config.js
+            yarn build && yarn start:prod

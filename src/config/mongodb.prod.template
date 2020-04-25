@@ -1,0 +1,2 @@
+# 线上环境时，配置该文件，然后删除文件的「.template」后缀
+MONGO_URL=mongodb://127.0.0.1:27017/nest
