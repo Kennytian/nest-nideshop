@@ -7,8 +7,8 @@ on:
     branches: [ release ]
 
 env:
-  HOST: ${{secrets.BD_HOST}
-  USERNAME: ${{secrets.BD_USERNAME}
+  HOST: ${{secrets.BD_HOST}}
+  USERNAME: ${{secrets.BD_USERNAME}}
   SSH_KEY:  ${{secrets.BD_SSH_KEY}}
   BACKEND_SRC: "./**"
   BACKEND_TARGET: nideshop
