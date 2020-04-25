@@ -11,7 +11,7 @@ env:
   USERNAME: root
   PORT: 22
   SSH_KEY:  ${{secrets.BD_SSH_KEY}}
-  BACKEND_SRC: "**"
+  BACKEND_SRC: "./**"
   BACKEND_TARGET: nideshop
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
           key: ${{ env.SSH_KEY }}
           source: ${{ env.BACKEND_SRC }}
           target: ${{ env.BACKEND_TARGET }}
-          strip_components: 1
+          strip_components: 0
           rm: true
       - name: SSH Remote Commands
         # https://github.com/appleboy/ssh-action
