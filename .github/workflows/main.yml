@@ -40,5 +40,4 @@ jobs:
           key: ${{ env.SSH_KEY }}
           script: |
             cd ${{ env.BACKEND_TARGET }}
-            ls -alhS
-            yarn && yarn build
+            yarn && yarn build && yarn start:prod
