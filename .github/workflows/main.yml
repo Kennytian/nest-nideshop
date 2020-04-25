@@ -33,7 +33,6 @@ jobs:
       - name: Checkout release branch code
       - uses: actions/checkout@v2
       - name: SCP Command to Transfer Files
-          # https://github.com/appleboy/scp-action
           uses: appleboy/scp-action@master
           with:
             host: ${{ env.HOST }}
@@ -44,7 +43,6 @@ jobs:
             strip_components: 1
             rm: true
       - name: SSH Remote Commands
-          # https://github.com/appleboy/ssh-action
           uses: appleboy/ssh-action@master
           with:
             host: ${{ env.HOST }}
