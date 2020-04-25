@@ -16,3 +16,6 @@
 
 #### generator module
 - nest g mo feature/cats
+
+### 坑
+- 要把 pm2.config.js 加入到「tsconfig.build.json」里
