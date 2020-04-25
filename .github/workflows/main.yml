@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Checkout release branch code
         uses: actions/checkout@v2
+
       - name: SCP Command to Transfer Files
         # https://github.com/appleboy/scp-action
         uses: appleboy/scp-action@master
@@ -30,6 +31,20 @@ jobs:
           target: ${{ env.BACKEND_TARGET }}
           strip_components: 0
           rm: false
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache dependencies
+        # https://github.com/actions/cache
+        uses: actions/cache@v1.1.2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: SSH Remote Commands
         # https://github.com/appleboy/ssh-action
         uses: appleboy/ssh-action@master
