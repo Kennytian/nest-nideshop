@@ -1,5 +1,9 @@
 # nest-nideshop
 
+![CI](https://github.com/Kennytian/nest-nideshop/workflows/CI/badge.svg?branch=master)
+
+
+![CI](https://github.com/Kennytian/nest-nideshop/workflows/CI/badge.svg?branch=release)
 
 #### nest help
 - nest --help
