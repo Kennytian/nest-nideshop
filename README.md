@@ -17,5 +17,10 @@
 #### generator module
 - nest g mo feature/cats
 
+### 本项目 GitHub Actions 前置条件
+- github secrets 已经配置好
+- 目标服务器 yarn 已安装
+- 目标服务器 pm2 已安装
+
 ### 坑
 - 要把 pm2.config.js 加入到「tsconfig.build.json」里
