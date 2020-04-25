@@ -31,24 +31,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout release branch code
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: SCP Command to Transfer Files
-          uses: appleboy/scp-action@master
-          with:
-            host: ${{ env.HOST }}
-            username: ${{ env.USERNAME }}
-            key: ${{ env.SSH_KEY }}
-            source: ${{ env.BACKEND_SRC }}
-            target: ${{ env.BACKEND_TARGET }}
-            strip_components: 1
-            rm: true
+        # https://github.com/appleboy/scp-action
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ env.HOST }}
+          username: ${{ env.USERNAME }}
+          key: ${{ env.SSH_KEY }}
+          source: ${{ env.BACKEND_SRC }}
+          target: ${{ env.BACKEND_TARGET }}
+          strip_components: 1
+          rm: true
       - name: SSH Remote Commands
-          uses: appleboy/ssh-action@master
-          with:
-            host: ${{ env.HOST }}
-            username: ${{ env.USERNAME }}
-            key: ${{ env.SSH_KEY }}
-            script: |
-              cd ${{ env.BACKEND_TARGET }}
-              ls -alhS
-              yarn && yarn build
+        # https://github.com/appleboy/ssh-action
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ env.HOST }}
+          username: ${{ env.USERNAME }}
+          key: ${{ env.SSH_KEY }}
+          script: |
+            cd ${{ env.BACKEND_TARGET }}
+            ls -alhS
+            yarn && yarn build
