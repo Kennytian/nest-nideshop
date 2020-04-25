@@ -40,4 +40,5 @@ jobs:
           key: ${{ env.SSH_KEY }}
           script: |
             cd ${{ env.BACKEND_TARGET }}
+            pm2 stop pm2.config.js
             yarn && yarn build && yarn start:prod
