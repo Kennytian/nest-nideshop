@@ -7,9 +7,8 @@ on:
     branches: [ release ]
 
 env:
-  HOST: 106.12.87.55
-  USERNAME: root
-  PORT: 22
+  HOST: ${{secrets.BD_HOST}
+  USERNAME: ${{secrets.BD_USERNAME}
   SSH_KEY:  ${{secrets.BD_SSH_KEY}}
   BACKEND_SRC: "./**"
   BACKEND_TARGET: nideshop
@@ -40,5 +39,5 @@ jobs:
           key: ${{ env.SSH_KEY }}
           script: |
             cd ${{ env.BACKEND_TARGET }}
-            pm2 stop pm2.config.js
-            yarn && yarn build && yarn start:prod
+            yarn ; pm2 stop pm2.config.js
+            yarn build && yarn start:prod
