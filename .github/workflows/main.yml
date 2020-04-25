@@ -15,19 +15,7 @@ env:
   BACKEND_TARGET: nideshop
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install yarn dependencies
-        run: |
-          echo Node.js runtime version: $(node -v)
-          yarn
-      - name: Run unit test
-        run: yarn test
-
   deploy:
-    # needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout release branch code
