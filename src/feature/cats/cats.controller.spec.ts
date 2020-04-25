@@ -1,18 +1,25 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test } from '@nestjs/testing';
+import { DatabaseModule } from '../../shared/database.module';
 import { CatsController } from './cats.controller';
+import { CatsService } from './cats.service';
 
 describe('Cats Controller', () => {
   let controller: CatsController;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
+    const moduleRef = await Test.createTestingModule({
+      imports: [DatabaseModule],
       controllers: [CatsController],
+      providers: [CatsService],
     }).compile();
 
-    controller = module.get<CatsController>(CatsController);
+    controller = moduleRef.get<CatsController>(CatsController);
   });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
+  describe('cats', () => {
+    it('Hello', async () => {
+      const result = await controller.hello();
+      expect(result).toEqual('Hello cats!');
+    });
   });
 });
