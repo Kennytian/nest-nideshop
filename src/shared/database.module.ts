@@ -7,11 +7,8 @@ const isDev = process.env.NODE_ENV !== 'production';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mongodb',
-      host: 'localhost',
-      port: 27017,
-      username: 'root',
-      password: '4lfj2h@Mongo',
-      database: 'nest',
+      url:
+        'mongodb://127.0.0.1:27017/nest?authSource=admin -u root -p 4lfj2h@Mongo',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
       useUnifiedTopology: true,
