@@ -1,10 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectEntityManager } from '@nestjs/typeorm';
 import { MongoEntityManager } from 'typeorm';
-import {
-  convertId2Instance,
-  convertIdInObject,
-} from '../../utils/input-covert';
+import { convertId2Instance, convertIdInObject } from '../../utils/input-covert';
 import { CatEntity, CatUpdateInput } from './cat.entity';
 import { BaseResp } from './base.entity';
 
@@ -12,9 +9,7 @@ import { BaseResp } from './base.entity';
 export class CatsService {
   private readonly objectIdKeys = 'farm,user';
 
-  constructor(
-    @InjectEntityManager() private readonly manager: MongoEntityManager,
-  ) {}
+  constructor(@InjectEntityManager() private readonly manager: MongoEntityManager) {}
 
   hello(): string {
     return 'Hello cats!';
@@ -53,10 +48,7 @@ export class CatsService {
       return { message: 'id 不能为空', code: 500, data: false };
     }
     try {
-      const data = await this.manager.deleteOne(
-        CatEntity,
-        convertId2Instance(id),
-      );
+      const data = await this.manager.deleteOne(CatEntity, convertId2Instance(id));
       return { message: '', code: 200, data: !!data?.deletedCount };
     } catch (e) {
       console.error('CatsService-deleteOne-error:', e);
@@ -70,16 +62,12 @@ export class CatsService {
       if (!id) {
         return { message: 'id 不能为空', code: 500, data: false };
       }
-      const data = await this.manager.updateOne(
-        CatEntity,
-        convertId2Instance(id),
-        {
-          $set: {
-            ...convertIdInObject(rest, this.objectIdKeys),
-            updateAt: new Date(),
-          },
+      const data = await this.manager.updateOne(CatEntity, convertId2Instance(id), {
+        $set: {
+          ...convertIdInObject(rest, this.objectIdKeys),
+          updateAt: new Date(),
         },
-      );
+      });
       return { message: '', code: 200, data: !!data?.result?.n };
     } catch (e) {
       console.error('CatsService-updateOne-error:', e);

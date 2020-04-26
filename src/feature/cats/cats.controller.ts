@@ -1,5 +1,7 @@
-import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query, UseFilters, UseGuards } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { HttpExceptionFilter } from '../../core/httpexception.filter';
+import { RolesGuard } from '../../core/roles.guard';
 import { CatEntity, CatUpdateInput } from './cat.entity';
 import { BaseResp } from './base.entity';
 import { CatsService } from './cats.service';
@@ -47,6 +49,7 @@ export class CatsController {
     summary: '更新指定 ID 的猫儿记录',
     description: '更新 ID 猫儿记录的描述',
   })
+  @UseFilters(new HttpExceptionFilter())
   updateOne(@Body() input: CatUpdateInput): Promise<BaseResp> {
     return this.catsService.updateOne(input);
   }
@@ -56,6 +59,7 @@ export class CatsController {
     summary: '查询所有猫儿的记录',
     description: '所有猫儿记录的描述',
   })
+  @UseGuards(RolesGuard)
   findAll(): Promise<BaseResp> {
     return this.catsService.findAll();
   }
