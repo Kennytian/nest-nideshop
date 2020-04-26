@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master, release ]
+    branches: [ release ]
   pull_request:
-    branches: [ feature/* ]
+    branches: [ master ]
 
 env:
   HOST: ${{secrets.BD_HOST}}

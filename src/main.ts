@@ -5,7 +5,7 @@ import { setupSwagger } from './shared/swagger';
 
 async function bootstrap() {
   const host = process.env.NODE_HOST || '127.0.0.1';
-  const port = process.env.NODE_PORT || 3005;
+  const port = process.env.NODE_PORT || 4006;
 
   const app = await NestFactory.create(AppModule, {
     // logger: ['warn','error'],
