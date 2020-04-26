@@ -490,7 +490,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@nestjs/cli@^7.0.0":
+"@nestjs/cli@^7.1.2":
   version "7.1.2"
   resolved "https://registry.npm.taobao.org/@nestjs/cli/download/@nestjs/cli-7.1.2.tgz#8ba65dfa679a97283cfbd5ed90b40a8bc950968a"
   integrity sha1-i6Zd+mealyg8+9XtkLQKi8lQloo=
@@ -518,7 +518,7 @@
     webpack "4.42.1"
     webpack-node-externals "1.7.2"
 
-"@nestjs/common@^7.0.0":
+"@nestjs/common@^7.0.9":
   version "7.0.9"
   resolved "https://registry.npm.taobao.org/@nestjs/common/download/@nestjs/common-7.0.9.tgz#b2818b0ea4617a37525341fc0233de84abd3c36a"
   integrity sha1-soGLDqRhejdSU0H8AjPehKvTw2o=
@@ -529,7 +529,7 @@
     tslib "1.11.1"
     uuid "7.0.3"
 
-"@nestjs/core@^7.0.0":
+"@nestjs/core@^7.0.9":
   version "7.0.9"
   resolved "https://registry.npm.taobao.org/@nestjs/core/download/@nestjs/core-7.0.9.tgz#7b17c0f844225fc38a24543f3ca598eb266ccb35"
   integrity sha1-exfA+EQiX8OKJFQ/PKWY6yZsyzU=
@@ -547,7 +547,7 @@
   resolved "https://registry.npm.taobao.org/@nestjs/mapped-types/download/@nestjs/mapped-types-0.0.3.tgz#7b50206935452e74a270ed9a07ad05a6305b0b42"
   integrity sha1-e1AgaTVFLnSicO2aB60FpjBbC0I=
 
-"@nestjs/platform-express@^7.0.7":
+"@nestjs/platform-express@^7.0.9":
   version "7.0.9"
   resolved "https://registry.npm.taobao.org/@nestjs/platform-express/download/@nestjs/platform-express-7.0.9.tgz#abfa9ae8855ddc889f644d4c4664682a4b11ff29"
   integrity sha1-q/qa6IVd3IifZE1MRmRoKksR/yk=
@@ -567,7 +567,7 @@
     "@angular-devkit/schematics" "9.0.6"
     fs-extra "8.1.0"
 
-"@nestjs/swagger@^4.5.1":
+"@nestjs/swagger@^4.5.3":
   version "4.5.3"
   resolved "https://registry.npm.taobao.org/@nestjs/swagger/download/@nestjs/swagger-4.5.3.tgz#efa489724b42e09aa3022abfd9b0660ecb91e721"
   integrity sha1-76SJcktC4JqjAiq/2bBmDsuR5yE=
@@ -576,7 +576,7 @@
     lodash "4.17.15"
     path-to-regexp "3.2.0"
 
-"@nestjs/testing@^7.0.0":
+"@nestjs/testing@^7.0.9":
   version "7.0.9"
   resolved "https://registry.npm.taobao.org/@nestjs/testing/download/@nestjs/testing-7.0.9.tgz#c6b342dd34f060f18406bd7eb753edc5ecbb35c7"
   integrity sha1-xrNC3TTwYPGEBr1+t1Ptxey7Ncc=
@@ -698,7 +698,7 @@
     "@types/node" "*"
     "@types/range-parser" "*"
 
-"@types/express@^4.17.3":
+"@types/express@^4.17.6":
   version "4.17.6"
   resolved "https://registry.npm.taobao.org/@types/express/download/@types/express-4.17.6.tgz#6bce49e49570507b86ea1b07b806f04697fac45e"
   integrity sha1-a85J5JVwUHuG6hsHuAbwRpf6xF4=
@@ -751,7 +751,7 @@
   resolved "https://registry.npm.taobao.org/@types/mime/download/@types/mime-2.0.1.tgz#dc488842312a7f075149312905b5e3c0b054c79d"
   integrity sha1-3EiIQjEqfwdRSTEpBbXjwLBUx50=
 
-"@types/mongodb@^3.5.5":
+"@types/mongodb@^3.5.11":
   version "3.5.11"
   resolved "https://registry.npm.taobao.org/@types/mongodb/download/@types/mongodb-3.5.11.tgz#d1acc167695a2d732aa1e44d3c97a1ab2b8f0431"
   integrity sha1-0azBZ2laLXMqoeRNPJehqyuPBDE=
@@ -759,7 +759,7 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^13.9.1":
+"@types/node@*", "@types/node@^13.13.2":
   version "13.13.2"
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-13.13.2.tgz#160d82623610db590a64e8ca81784e11117e5a54"
   integrity sha1-Fg2CYjYQ21kKZOjKgXhOERF+WlQ=
@@ -867,7 +867,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^2.23.0":
+"@typescript-eslint/eslint-plugin@^2.29.0":
   version "2.29.0"
   resolved "https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-2.29.0.tgz#c9efab7624e3dd6d144a0e4577a541d1bd42c2ac"
   integrity sha1-ye+rdiTj3W0USg5Fd6VB0b1Cwqw=
@@ -887,7 +887,7 @@
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
-"@typescript-eslint/parser@^2.23.0":
+"@typescript-eslint/parser@^2.29.0":
   version "2.29.0"
   resolved "https://registry.npm.taobao.org/@typescript-eslint/parser/download/@typescript-eslint/parser-2.29.0.tgz#6e3c4e21ed6393dc05b9d8b47f0b7e731ef21c9c"
   integrity sha1-bjxOIe1jk9wFudi0fwt+cx7yHJw=
@@ -2574,7 +2574,7 @@ escodegen@^1.11.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^6.10.0:
+eslint-config-prettier@^6.11.0:
   version "6.11.0"
   resolved "https://registry.npm.taobao.org/eslint-config-prettier/download/eslint-config-prettier-6.11.0.tgz?cache=0&sync_timestamp=1587497107068&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-config-prettier%2Fdownload%2Feslint-config-prettier-6.11.0.tgz#f6d2238c1290d01c859a8b5c1f7d352a0b0da8b1"
   integrity sha1-9tIjjBKQ0ByFmotcH301KgsNqLE=
@@ -2597,7 +2597,7 @@ eslint-module-utils@^2.4.1:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
-eslint-plugin-import@^2.20.1:
+eslint-plugin-import@^2.20.2:
   version "2.20.2"
   resolved "https://registry.npm.taobao.org/eslint-plugin-import/download/eslint-plugin-import-2.20.2.tgz#91fc3807ce08be4837141272c8b99073906e588d"
   integrity sha1-kfw4B84Ivkg3FBJyyLmQc5BuWI0=
@@ -4194,7 +4194,7 @@ jest-worker@^25.4.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jest@^25.1.0:
+jest@^25.4.0:
   version "25.4.0"
   resolved "https://registry.npm.taobao.org/jest/download/jest-25.4.0.tgz#fb96892c5c4e4a6b9bcb12068849cddf4c5f8cc7"
   integrity sha1-+5aJLFxOSmubyxIGiEnN30xfjMc=
@@ -4703,7 +4703,7 @@ mkdirp@^0.5.1, mkdirp@^0.5.3:
   dependencies:
     minimist "^1.2.5"
 
-mongodb@^3.5.5:
+mongodb@^3.5.6:
   version "3.5.6"
   resolved "https://registry.npm.taobao.org/mongodb/download/mongodb-3.5.6.tgz?cache=0&sync_timestamp=1586865098460&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmongodb%2Fdownload%2Fmongodb-3.5.6.tgz#a1be2d9796c8a8a5b0e6bcbc6baaaa406bd5c0d5"
   integrity sha1-ob4tl5bIqKWw5ry8a6qqQGvVwNU=
@@ -5822,7 +5822,7 @@ rxjs@6.5.4:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.5.3, rxjs@^6.5.4:
+rxjs@^6.5.3, rxjs@^6.5.5:
   version "6.5.5"
   resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.5.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frxjs%2Fdownload%2Frxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
   integrity sha1-xciE4wlMjP7jG/J+uH5UzPyH+ew=
@@ -6676,7 +6676,7 @@ ts-loader@^7.0.1:
     micromatch "^4.0.0"
     semver "^6.0.0"
 
-ts-node@^8.6.2:
+ts-node@^8.9.0:
   version "8.9.0"
   resolved "https://registry.npm.taobao.org/ts-node/download/ts-node-8.9.0.tgz?cache=0&sync_timestamp=1587418833738&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-node%2Fdownload%2Fts-node-8.9.0.tgz#d7bf7272dcbecd3a2aa18bd0b96c7d2f270c15d4"
   integrity sha1-179ycty+zToqoYvQuWx9LycMFdQ=
@@ -6813,7 +6813,7 @@ typeorm@^0.2.24:
     yargonaut "^1.1.2"
     yargs "^13.2.1"
 
-typescript@^3.6.4, typescript@^3.7.4:
+typescript@^3.6.4, typescript@^3.8.3:
   version "3.8.3"
   resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.8.3.tgz?cache=0&sync_timestamp=1587714094281&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
   integrity sha1-QJ64VE6gM1cRIFhp7EWKsQnuEGE=
